@@ -3,7 +3,7 @@
  "repository"   : "repository.tknorris.release",
  "plugin"       : "plugin.video.salts",
  "priority"     : 200,
- "id"           : "direct.salts.q",
+ "id"           : "direct.saltshdlite.q",
  "filters"      : {},
  "postprocess"  : "",
  "movies"       : [
