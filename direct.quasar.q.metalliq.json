@@ -2,7 +2,7 @@
  "name"         : "Quasar",
  "repository"   : "repository.unofficialquasar",
  "plugin"       : "plugin.video.quasar",
- "priority"     : 200,
+ "priority"     : 199,
  "id"           : "direct.quasar.q",
  "filters"      : {},
  "postprocess"  : "",
