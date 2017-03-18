@@ -1,6 +1,6 @@
 {
  "name"         : "Salts",
- "repository"   : "repository.tknorris.release",
+ "repository"   : "repository.tknorris.beta",
  "plugin"       : "plugin.video.salts",
  "priority"     : 200,
  "id"           : "direct.saltshdlite.q",
