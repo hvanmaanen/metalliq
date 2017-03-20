@@ -1,5 +1,5 @@
 {
- "name"         : "Direct [COLOR FF0084FF]-[/COLOR] Zen ([COLOR FF0084FF]Q[/COLOR])",
+ "name"         : "Zen",
  "repository"   : "repository.schismtvaddons",
  "plugin"       : "plugin.video.zen",
  "priority"     : 200,
