@@ -1,0 +1,22 @@
+{
+ "name"         : "Search [COLOR ff0084ff]-[/COLOR] 1080p ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.dandymedia",
+ "plugin"       : "plugin.video.1080pmovies_gw",
+ "priority"     : 900,
+ "id"           : "search.1080pmovies.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.1080pmovies_gw/?url=http%3A%2F%2F1080pmovies.org%2F%3Fp%3D3060&amp;mode=100",
+    "steps"     : [],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

@@ -1,0 +1,98 @@
+{
+ "name"         : "Explore [COLOR ff0084ff]-[/COLOR] Dandymedia ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.dandymedia",
+ "plugin"       : "plugin.video.dandymedia",
+ "priority"     : 700,
+ "id"           : "explore.dandymedia.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.dandymedia/?description&amp;fanart=special://home/addons/plugin.video.dandymedia/fanart.jpg&amp;iconimage=special://home/addons/plugin.video.dandymedia/icon.png&amp;mode=60&amp;name=Documentary&amp;url=http%3a%2f%2fwww.uwatchfree.me%2f%3fs%3d{clearname_+}%26submit%3dSearch %2fwatch-online%2f",
+    "steps"     : [
+     "><{title}.*"
+     ],
+    "action"    : "RUN"
+   },
+   {
+    "link"      : "plugin://plugin.video.dandymedia/",
+    "steps"     : [
+     "@anycontaining:1080",
+     "($$.*$$){title}.({year}|).*($$.*$$)@page:($$.*$$)Next Page.*($$.*$$)",
+     "><.*"
+     ],
+    "action"    : "RUN"
+   },
+   {
+    "link"      : "plugin://plugin.video.dandymedia/",
+    "steps"     : [
+     "@anycontaining:720",
+     "($$.*$$){title}.({year}|).*($$.*$$)@page:($$.*$$)Next Page.*($$.*$$)",
+     "><.*"
+     ],
+    "action"    : "RUN"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.dandymedia/?description&amp;fanart=special://home/addons/plugin.video.dandymedia/fanart.jpg&amp;iconimage=special://home/addons/plugin.video.dandymedia/icon.png&amp;mode=77&amp;name=Search&amp;url=url",
+    "steps"     : [
+     "@keyboard:{clearname}",
+     "><{clearname|replace(Æ,Ae)}.-.SEASON.{season}",
+     "><.*S{season:02d}E{episode:02d}.*"
+     ],
+    "action"    : "RUN"
+   },
+   {
+    "link"      : "plugin://plugin.video.dandymedia/?description&amp;fanart=special://home/addons/plugin.video.dandymedia/fanart.jpg&amp;iconimage=special://home/addons/plugin.video.dandymedia/icon.png&amp;mode=20&amp;name=Popular+TVShows&amp;url=http%3a%2f%2f123moviesonline.co%2fseries%2f",
+    "steps"     : [
+     "><{clearname|replace(Æ,Ae)}.*",
+     "><Season.{season}.*",
+     "><Episode.{episode}.*"
+     ],
+    "action"    : "RUN"
+   },
+   {
+    "link"      : "plugin://plugin.video.dandymedia/?description&amp;fanart=special://home/addons/plugin.video.dandymedia/fanart.jpg&amp;iconimage=special://home/addons/plugin.video.dandymedia/icon.png&amp;mode=8&amp;name=Childrens&amp;url=https%3a%2f%2fraw.githubusercontent.com%2fdandy0850%2fiStream%2fmaster%2ftest%2fbobbychans.txt",
+    "steps"     : [
+     "><{clearname|replace(Æ,Ae)}.*",
+     "><Season.{season}.*",
+     "><Episode.{episode:02d}.*"
+     ],
+    "action"    : "RUN"
+   },
+   {
+    "link"      : "plugin://plugin.video.dandymedia/?description&amp;fanart=special://home/addons/plugin.video.dandymedia/fanart.jpg&amp;iconimage=special://home/addons/plugin.video.dandymedia/icon.png&amp;mode=20&amp;name=Anime&amp;url=http%3a%2f%2f123moviesonline.co%2fanimes%2f",
+    "steps"     : [
+     "><{clearname|replace(Æ,Ae)}.*",
+     "><Season.{season}.*",
+     "><Episode.{episode}"
+     ],
+    "action"    : "RUN"
+   }
+  ]
+ ],
+ "musicvideos"  : [
+  [
+   {
+    "link"      : "plugin://plugin.video.dandymedia/?description&amp;fanart=special://home/addons/plugin.video.dandymedia/fanart.jpg&amp;iconimage=special://home/addons/plugin.video.dandymedia/icon.png&amp;mode=7&amp;name=Documentary&amp;url=https%3a%2f%2fraw.githubusercontent.com%2fdandy0850%2fiStream%2fmaster%2fdandymedia_2%2fhdconcerts.xml",
+    "steps"     : [
+     "><{artist}.*{album}.*"
+     ],
+    "action"    : "RUN"
+   },
+   {
+    "link"      : "plugin://plugin.video.dandymedia/?description&amp;fanart=special://home/addons/plugin.video.dandymedia/fanart.jpg&amp;iconimage=special://home/addons/plugin.video.dandymedia/icon.png&amp;mode=7&amp;name=Documentary&amp;url=https%3a%2f%2fraw.githubusercontent.com%2fdandy0850%2fiStream%2fmaster%2fdandymedia_2%2fhdconcerts.xml",
+    "steps"     : [
+     "><.*{artist}.*"
+     ],
+    "action"    : "RUN"
+   }
+  ]
+ ],
+ "music"        : [],
+ "live"         : []
+}

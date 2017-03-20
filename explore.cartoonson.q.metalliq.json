@@ -1,0 +1,36 @@
+{
+ "name"         : "Explore [COLOR ff0084ff]-[/COLOR] CartoonsOn ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.dandymedia",
+ "plugin"       : "plugin.video.cartoonson",
+ "priority"     : 700,
+ "id"           : "explore.cartoonson.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.cartoonson/?description&amp;fanart=special://home/addons/plugin.video.cartoonson/fanart.jpg&amp;iconimage=special://home/addons/plugin.video.cartoonson/icon.png&amp;mode=5&amp;name=Search&amp;url=http%3a%2f%2fwww.cartoonson.com%2f",
+    "steps"     : [
+     "@any",
+     "($$.*$$)({title}.*{year}.*|{title}.*)($$.*$$)@page:($$.*$$)Next Page.*($$.*$$)"
+     ],
+    "action"    : "RUN"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.cartoonson/?description&amp;fanart=special://home/addons/plugin.video.cartoonson/fanart.jpg&amp;iconimage=special://home/addons/plugin.video.cartoonson/icon.png&amp;mode=7&amp;name=CartoonsOn&amp;url=http%3a%2f%2fwww.cartoonson.com%2f",
+    "steps"     : [
+     "><{clearname|replace(Æ,Ae)}.*",
+     "><Season {season} Episode {episode:02d}"
+     ],
+    "action"    : "RUN"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}
